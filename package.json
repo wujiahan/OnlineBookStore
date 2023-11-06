@@ -1,0 +1,33 @@
+{
+  "name": "online-bookstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "seed": "node tasks/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzwfighting/Online-Bookstore.git"
+  },
+  "author": "Zhipeng Yin,Weichuan Cai,Wujia Han,Yiwen Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzwfighting/Online-Bookstore/issues"
+  },
+  "homepage": "https://github.com/dzwfighting/Online-Bookstore#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.3",
+    "express-handlebars": "^5.3.5",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.7",
+    "middleware": "^1.0.0",
+    "mongodb": "^4.5.0",
+    "multer": "^1.4.4",
+    "path": "^0.12.7",
+    "xss": "^1.0.11"
+  }
+}

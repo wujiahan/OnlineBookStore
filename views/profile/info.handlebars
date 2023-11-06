@@ -1,0 +1,48 @@
+<div class="profile-card">
+ <div class="card-header">
+ <div class="pic">
+ <img src="/public/static/logo.jpeg" alt="No image">
+ </div>
+ <div class="name">{{user.username}}
+     <div style="display:inline" class="vip">
+         {{#if user.vip}}
+         <img src="/public/static/vip.svg" alt="No img"id="vipPic">
+         {{/if}}
+     </div>
+ </div>
+ <div class="desc">{{user.email}}</div>
+ <div class="sm">
+     <ul>
+         <li>
+             <a href="/users/recharge" class="recharge">Recharge</a>
+         </li>
+         <li>
+             <a href="/users/vip" class="beVIP">Be VIP</a>
+         </li>
+         <li>
+             <a href="/bookshelf/{{user._id}}" class="myBookShelf">My Bookshelf</a>
+         </li>
+         <li>
+             <a href="/users/logout" class="logOut">Log Out</a>
+         </li>
+
+     </ul>
+ </div>
+ <a href="/book/search" class="contact-btn">Buy Books</a>
+ </div>
+ <div class="card-footer">
+ <div class="numbers">
+ <div class="item">
+ <span>${{user.balance}}</span>
+ Balance
+ </div>
+ <div class="border"></div>
+
+ <div class="border"></div>
+ <div class="item">
+ <a href="/users/purchase/{{user._id}}" style="color:#1f74b4;">My Purchase History</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ <link rel="stylesheet" type="text/css" href="/public/css/profile.css"> 

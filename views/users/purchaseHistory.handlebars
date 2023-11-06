@@ -1,0 +1,32 @@
+<head>
+    <style type="text/css">
+     body
+        {
+            /*background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);*/
+            /*background-image: url(" 2558.jpg");*/
+            /*background-size:cover;*/
+            background: #aa4b6b;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    
+    
+    
+    </style>
+</head>
+
+
+
+<div>
+    <h1>Here is your purchase history</h1>
+</div>
+<ul>
+    {{message}}
+    {{#each user.bookshelf}}
+    <li><a href="/book/{{_id}}" style="color: black;">{{bookName}} </a></li>
+    {{/each}}
+</ul>
+<div class="footer">
+    <a href="/users/profile" style="color: black;">Back to profile</a>
+
+</div>

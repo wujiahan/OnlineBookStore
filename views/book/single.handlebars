@@ -1,0 +1,45 @@
+
+<link rel="stylesheet" href="/public/css/index.css"/>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="/public/js/main.js"></script>
+<script type="text/javascript" src="js/mz-packed.js"></script>
+<div class="main">
+	<div class="container clearfix">
+		<div class="main-left fl clearfix">
+			<div class="zoom-wrap fl">
+				<div id="zoom">
+						<img class="bzoom" src={{book.bookCovers}} width="300" height="424" alt="No available pictures."/>
+				</div>
+			</div>
+			<div class="attr fl">
+				<p>Book Name:<span>{{book.bookName}}</span></p>
+				<p>Description:<span>{{book.description}}</span></p>
+				<p>Author:<span>{{book.author}}</span></p>
+                <p>Book Tags:<span>{{book.bookTag}}</span></p>
+				<p>Rating:<span>{{book.avgRating}}</span></p>
+				<p>Publication Date:<span>{{book.publicationDate}}</span></p>
+                <p>Price:$<span>{{book.price}}</span></p>
+				<a href="/book/buy/{{book._id}}" class="pay">Buy Now</a>
+			</div>
+			<div class="clearfix"></div>
+            {{#if flag}}
+               <h1>No comments available.</h1>
+            {{else}}
+            {{#each book.reviews}}
+			<div class="description clearfix">
+				<h1>User Comment</h1>
+				<p>{{reviewText}}</p>
+			</div>
+			{{/each}}
+            {{/if}}
+            
+		</div>
+
+	</div>
+</div>
+
+<div id="return">
+	<button id="btn"><a href="/book/search" class="back">All Books</a></button>
+</div>
+
+
